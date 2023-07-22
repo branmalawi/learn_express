@@ -6,6 +6,9 @@ const app = express();
 app.get("/", (req, res) => {
   res.send("hello world");
 });
+app.get("/name", (req, res) => {
+  res.send(`hello ${req.query.name}`);
+});
 app.get("/*", (req, res) => {
   res.sendStatus(404);
 });
